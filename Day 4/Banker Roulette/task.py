@@ -1,6 +1,7 @@
 import random
 
 friends = ["Alice", "Bob", "Charlie", "David", "Emanuel"]
+pay_bill = random.choice(friends)
+print(pay_bill)
 
-random_friends_name = random.choice(friends)
-print(random_friends_name)
+

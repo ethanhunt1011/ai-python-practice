@@ -1,8 +1,8 @@
 #even numbers ,modulo
 
-even = int(input("please enter the first number - \n"))
-if even % 2 ==0:
-    print("Even")
+even = int(input("Please enter your number :\n"))
+if even % 2 == 0 :
+    print("Number is even ")
 else:
-    print("Odd")
+    print("number is odd")
 

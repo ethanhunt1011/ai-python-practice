@@ -4,7 +4,7 @@ bill = 0
 if height >= 120:
     print("You can ride the rollercoaster")
     age = int(input("What is your age? "))
-    if age <= 12:
+    if age < 12:
         bill = 5
         print("Child pay $5.")
     elif age <= 18:
@@ -13,10 +13,14 @@ if height >= 120:
     else:
         bill = 12
         print("Adult pay $12.")
-    wants_photo = input("Do you want a photo? Type y for yes and n for no.")
-    if wants_photo == "y":
-        bill += 3
-    print(f"Your final bill is {bill}")
+    photo = input("Do you need a photo if Yes type Y , No type N : ").lower()
+    if photo == "y":
+        bill+=3
+        print(f"Your ticket price is : {bill}$ ")
+    elif photo =="n":
+        print(f"Your ticket price is : {bill}$")
+    else:
+        print("Wrong input try again")
 
 
 else:

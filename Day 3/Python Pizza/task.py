@@ -1,33 +1,44 @@
-print("Welcome to Python Pizza Deliveries!")
-size = input("Which pizza would you like to order ? S , M or L")
-pepperoni = input("Do you want pepporoni for your order ? Write Y for yes and N for no")
-extra_cheese = input("Do you want extra cheese for your Pizza ,Y or N?")
+print("Welcome to Python Pizza")
+
+size = input("What size pizza do you want , S , M or L: ").lower()
+
+
 bill = 0
+if size== "s":
+    bill+=15
+    pepperoni = input("Do you need pepperoni , Y or N : ").lower()
+    if pepperoni == "y":
+        bill += 2
+    extra_cheese = input("Do you need extra cheese , Y or N : ").lower()
+    if extra_cheese == "y":
+            bill += 1
+    print(f"Your final bill : {bill}")
 
-
-if size =="S":
-    bill = 15
-    if pepperoni == "Y":
-        bill +=2
-    if extra_cheese == "Y":
-       bill += 1
-    print(f"Your final bill is: ${bill}.")
-elif size == "M":
-     bill = 20
-     if pepperoni == "Y":
+elif size =="m":
+    bill+=20
+    pepperoni = input("Do you need pepperoni , Y or N : ").lower()
+    if pepperoni == "y":
         bill += 3
-     if extra_cheese == "Y":
-        bill += 1
-     print(f"Your final bill is: ${bill}.")
-elif size == "L":
-     bill = 25
-     if pepperoni == "Y":
+    extra_cheese = input("Do you need extra cheese , Y or N : ").lower()
+    if extra_cheese == "y":
+            bill += 1
+    print(f"Your final bill : {bill}")
+elif size=="l":
+    bill+=25
+    pepperoni = input("Do you need pepperoni , Y or N : ").lower()
+    if pepperoni == "y":
         bill += 3
-     if extra_cheese == "Y":
-        bill += 1
-     print(f"Your final bill is: ${bill}.")
+    extra_cheese = input("Do you need extra cheese , Y or N : ").lower()
+    if extra_cheese == "y":
+            bill += 1
+    print(f"Your final bill : {bill}")
 else:
-    print("You have entered a wrong keyword!!")
+    print("wrong input try again")
+
+
+
+
+
 
 
 

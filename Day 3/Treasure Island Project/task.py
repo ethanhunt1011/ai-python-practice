@@ -22,23 +22,22 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
-side = input(" You have reached a crossroad ahead . There are two ways."
-             "Where do you wanna go ?\nLeft or Right?\n").lower()
-if side == "left"  :
-    nett = input("There is a little island ahead .Do you want to swim or wait for a boat?\n").lower()
-    if nett == "wait" and "Wait":
-        neon = input("You have reached the island . There are multiple doors here ."
-                     "Which door you want to select?\nred , blue or yellow?\n").lower()
-        if neon == "yellow"  :
+side = input("Select a side right or left : ").lower()
+if side== "left":
+    print("You have reached near by a river. ")
+    nst = input("Now what do you want to do swim or wait here ").lower()
+    if nst== "wait":
+        print("There came a boat which took you to a island. ")
+        nst2 = input("Here on island you have three doors select one, Red , Blue or Yellow ").lower()
+        if nst2 == "red":
+            print("You got burned by fire . GAME OVER")
+        elif nst2 == "blue":
+            print("You got eaten by beasts. GAME OVER ")
+        elif nst2== "yellow":
             print("YOU WIN!!!")
-        elif neon == "red"  :
-            print("You are burned by fire.\nGAME OVER!! ")
-        elif neon == "blue"  :
-            print("You are eaten by beasts.\nGAME OVER!!")
         else:
-            print("GAME OVER!!")
-
+            print("GAME OVER.")
     else:
-        print("You are attacked by trout.\nGAME OVER!!")
+        print("You got attacked by trout . GAME OVER")
 else:
-    print("You have fallen into a whole\nGAME OVER!!")
+    print("You fall into a hole .GAME OVER ")

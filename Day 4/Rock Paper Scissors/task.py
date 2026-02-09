@@ -1,4 +1,6 @@
 import random
+from math import radians
+
 rock = '''
     _______
 ---'   ____)
@@ -25,25 +27,26 @@ scissors = '''
       (____)
 ---.__(___)
 '''
-selection = int(input("What do you choose? Type 0 for rock , 1 for paper and 2 for scissors.\n"))
-computer_selection = random.randint(0,2)
-if selection == 0 and computer_selection ==1:
-    print(f"You choose - {selection}{rock}\n Computer choose -{computer_selection} {paper}\n You Lose")
-elif selection    == 1 and computer_selection == 0:
-    print(f"You choose - {selection}{paper}\n Computer choose - {computer_selection}{rock}\n YOU WIN")
-elif selection == 2 and computer_selection   == 0:
-    print(f"You choose = {selection}{scissors}\n Computer choose = {computer_selection}{rock}\n YOU Lose")
-elif selection == 0 and computer_selection   == 2:
-    print(f"You choose = {selection}{rock}\n Computer choose = {computer_selection}{scissors}\n YOU WIN ")
-elif selection == 1 and computer_selection   == 2:
-    print(f"You choose ={selection} {paper}\n Computer choose = {computer_selection}{scissors}\n You Lose")
-elif selection == 2 and computer_selection   == 1:
-    print(f"You choose = {selection}{scissors}\n Computer choose = {computer_selection}{paper}\n You win ")
-elif selection == 0 and computer_selection   == 0:
-    print(f"You and Computer choose - {rock}\n SO ITS A TIE ")
-elif selection == 1 and computer_selection   == 1:
-    print(f"You and Computer choose - {paper}\n SO ITS A TIE ")
-elif selection == 2 and computer_selection   == 2:
-    print(f"You and Computer choose - {scissors}\n SO ITS A TIE ")
-else:
-    print("Wrong input , Please try again.")
+gamelist = [rock,paper,scissors]
+user_choice = int(input("Hello welcome to the game . \n select 0 for rock  1 for paper and 2 for scissors:\n"))
+
+
+if 0<=user_choice<=3:
+    print(f"You choose {gamelist[user_choice]} ")
+computer = random.randint(0,2)
+print(f"computer choose {gamelist[computer]}")
+
+if 0>user_choice>=3:
+    print("You have entered wrong , YOU LOST.")
+
+elif user_choice==computer:
+    print("ITS A TIE")
+
+elif user_choice == 2 and computer ==0:
+     print("You lose")
+elif computer == 2 and user_choice==0:
+     print("You win")
+elif user_choice>computer:
+    print("You win")
+elif user_choice<computer:
+    print("You lose")
