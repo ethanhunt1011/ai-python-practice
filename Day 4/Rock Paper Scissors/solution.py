@@ -33,7 +33,7 @@ user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 f
 # Note: it's worth checking if the user has made a valid choice before the next line of code.
 # If the user typed somthing other than 0, 1 or 2 the next line will give you an error.
 # You could for example write:
-if user_choice >= 0 and user_choice <= 2:
+if 0 <= user_choice <= 2:
     print(game_images[user_choice])
 
 computer_choice = random.randint(0, 2)
